@@ -49,3 +49,6 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');//get current product
     echo $product->getId();
     echo $product->getName();
+6)  for get custom attribute value
+"Test" is our custom attribute. add get befor yout custom attribute name With Captal first letter of your attribute
+$test = $_helper->productAttribute($_product, $_product->getTest(), 'test');
