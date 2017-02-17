@@ -33,3 +33,13 @@ End :: Get Product image
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
 $store_url = $storeManager->getStore()->getBaseUrl();
+
+
+4) For Get Media URL in Magento 2
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+ $currentStore = $storeManager->getStore();
+ $baseUrl = $currentStore->getBaseUrl();
+ $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
