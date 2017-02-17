@@ -43,3 +43,9 @@ $storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'
  $baseUrl = $currentStore->getBaseUrl();
  $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
 
+5) Get Product id and name in magento 2
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');//get current product
+    echo $product->getId();
+    echo $product->getName();
