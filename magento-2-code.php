@@ -26,3 +26,10 @@ foreach($images as $child){
 /*
 End :: Get Product image
 */
+
+
+3) How to get Store URL in Magento 2
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+$store_url = $storeManager->getStore()->getBaseUrl();
