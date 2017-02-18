@@ -52,3 +52,29 @@ $product = $objectManager->get('Magento\Framework\Registry')->registry('current_
 6)  for get custom attribute value
 "Test" is our custom attribute. add get befor yout custom attribute name With Captal first letter of your attribute
 $test = $_helper->productAttribute($_product, $_product->getTest(), 'test');
+
+
+7) How To Call Custom Block in .phtml file 
+
+- Create new Custom Block with related_products identifre
+
+D:\xampp\htdocs\souldrops\app\design\frontend\Smartwave\porto\Smartwave_Porto\layout\default.xml
+
+ADD Followning code.
+
+<block class="Magento\Cms\Block\Block" name="related_products">
+        <arguments>
+            <argument name="block_id" xsi:type="string">related_products</argument>
+        </arguments>
+</block>
+
+Add Following code to any .phtml file
+
+
+  echo 'SHIV'.$this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('related_products')->toHtml(); 
+
+
+
+
+
+
