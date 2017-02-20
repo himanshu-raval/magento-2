@@ -75,6 +75,11 @@ Add Following code to any .phtml file
 
 
 
+8) Call phtml file in  cmc Block magento 2
+
+{{block class="Magento\Framework\View\Element\Template"   template="Smartwave_Filterproducts::category_list.phtml"}}
+
+Locations :: D:\xampp\htdocs\souldrops\app\design\frontend\Smartwave\porto\Smartwave_Filterproducts\templates\category_list.phtml
 
 
 
