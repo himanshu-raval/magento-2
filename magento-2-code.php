@@ -82,4 +82,18 @@ Add Following code to any .phtml file
 Locations :: D:\xampp\htdocs\souldrops\app\design\frontend\Smartwave\porto\Smartwave_Filterproducts\templates\category_list.phtml
 
 
+9) Check User is Login and Get My Acount URL & Wishlist
 
+<ul class="header links">
+    <?php if ($block->isLoggedIn()): ?>
+    <li>
+        <a href="<?php echo $block->getAccountUrl() ?>">
+            <?php echo __('My Account') ?>
+        </a>
+    </li>
+    <?php endif; ?>
+</ul>
+
+<li>
+        <a href="<?php echo $this->getUrl('wishlist') ?>">Wishlist</a>
+    </li> 
