@@ -11,6 +11,37 @@ Get Product image
 // echo "Product ID".$_product->getId();
 
 
+
+
+Simple Way ::
+ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $product = $objectManager->create('Magento\Catalog\Model\Product')->load($_product->getId());    
+    $thumb = $product->getThumbnail(); // Thumb image
+    $main_img = $product->getImage();  // main image
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+ $currentStore = $storeManager->getStore();
+ $baseUrl = $currentStore->getBaseUrl();
+ $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+
+    if(isset($main_img)){
+        $productImageUrl = $mediaUrl.'catalog/product/'.$main_img;
+    }
+
+
+// Get All image list
+
+ //$a =  $product->getMediaGalleryEntries();
+    //$a = $product->getMediaGallery('images');
+ 
+   //  echo "AIS-<pre/>";print_r($t);
+
+
+
+
+
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $product = $objectManager->create('Magento\Catalog\Model\Product')->load($_product->getId());        
 $images = $product->getMediaGalleryImages();
