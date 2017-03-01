@@ -128,3 +128,16 @@ Locations :: D:\xampp\htdocs\souldrops\app\design\frontend\Smartwave\porto\Smart
 <li>
         <a href="<?php echo $this->getUrl('wishlist') ?>">Wishlist</a>
     </li> 
+
+10) Remove Reviews And Rating From Product Page
+
+/home/aistech/public_html/souldrops/app/design/frontend/Smartwave/porto/Smartwave_Porto/layout/deafult.xml
+Add Following code After <Body> tag
+
+  <!-- Code For Remove Reviews And Rating From Product Page -->
+        <referenceBlock name="reviews.tab" remove="true" />
+        <referenceBlock name="product.review.form" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+        <!-- End Code -->
+ 
+ 
