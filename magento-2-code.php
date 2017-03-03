@@ -145,4 +145,9 @@ Add Following code After <Body> tag
         <referenceBlock name="product.info.review" remove="true" />
         <!-- End Code -->
  
+ 11) Arabic language pack
+ 
+ /home/aistech/public_html/souldrops/app/i18n/mageplaza/ar_SA/
+ Put all code here..
+ .csv,.xml, .json and etc file
  
