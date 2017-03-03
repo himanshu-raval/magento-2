@@ -151,3 +151,11 @@ Add Following code After <Body> tag
  Put all code here..
  .csv,.xml, .json and etc file
  
+ 
+ 12) for Custom/Overide css custom.css,styles-m.css,styles-l.css and etc
+ 
+ - Create custom.css/styles-m.css/styles-l.css in /home/aistech/public_html/souldrops/app/design/frontend/Smartwave/porto/web/
+ 
+ - when user upgrade magento that time your all css in Pub folder was dilited and Gnerate New Copy from web folder.
+ 
+ 
