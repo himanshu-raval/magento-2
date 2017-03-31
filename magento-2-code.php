@@ -159,3 +159,10 @@ Add Following code After <Body> tag
  - when user upgrade magento that time your all css in Pub folder was dilited and Gnerate New Copy from web folder.
  
  
+ 
+ Email internal code ::
+ /home/aistech/public_html/souldrops/vendor/magento/module-sales/view/frontend/templates/email/items/
+ -> invoice email , order email , memo email etc
+ 
+ 
+ 
