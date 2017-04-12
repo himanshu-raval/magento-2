@@ -165,4 +165,30 @@ Add Following code After <Body> tag
  -> invoice email , order email , memo email etc
  
  
+13) Magento Configurable Product Child ID - & Other Details
  
+  $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');//get current product
+    $productTypeInstance = $product->getTypeInstance();
+    $usedProducts = $productTypeInstance->getUsedProducts($product);
+
+    // echo "Super ID =".$product->getId(); //Main configurable product ID
+   // echo $product->getName(); //Main Configurable Name
+ $product_stock = array();
+   foreach ($usedProducts  as $child) {
+     $StockState = $objectManager->get('\Magento\CatalogInventory\Api\StockStateInterface');
+     $stock =  $StockState->getStockQty($child->getId(), $product->getStore()->getWebsiteId());
+     $child_id = $child->getId();
+
+      $product_stock [$child_id] = $stock; 
+       
+       //echo "<br/>".$child_id."-".$stock;
+
+        // echo $child->getId()."</br>"; //Child Product Id  
+        // echo $child->getName()."</br>"; //Child Product Name
+    }
+
+    print_r($product_stock);
+
+    json_encode($product_stock);
+
